@@ -1,0 +1,36 @@
+#title {
+    color: yellow;
+    text-align: center; 
+    font-family: 'Pacifico', cursive; 
+    font-size:max(2vw, 7vw); 
+    margin:0 auto;
+}
+
+.row {
+    display:flex; 
+    justify-content:center
+}
+
+
+.seasonimage {
+    text-align: center; width:40%
+}
+
+.img{
+    border:1px solid yellow;
+    width:100%;
+    height:auto
+}
+#img_topleft{
+    border-top-left-radius:25px;   
+}
+#img_topright{
+    border-top-right-radius:25px; 
+}
+#img_bottomleft{
+    border-bottom-left-radius:25px;
+}
+#img_bottomright{
+    border-bottom-right-radius:25px; 
+}
+

@@ -1,0 +1,75 @@
+.teamImg{
+    width: 100%;
+    height: auto;
+    border: 2px solid #000000;
+    object-fit: cover;
+}
+
+.teamFigure {
+    width: 100%;
+    padding: 10px;
+}
+
+#teamFlexBox {
+    display: flex;
+    /* flex-wrap: wrap; */
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#background{
+    background-color: rgba(77, 90, 238, 0.921);
+}
+
+hr {
+    border: 2px;
+    border-top: 3px solid black;
+}
+
+.pageTitle {
+    text-align: center;
+    font-size: 48px;
+    color: #333333;
+    font-family: 'Arial', sans-serif;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.pageLinks {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin-bottom: 2px;
+}
+
+.pageLinks a {
+    text-decoration: none;
+    border: 2px solid black;
+    padding: 8px;
+    color: black;
+    background-color: #acaaaa90;
+
+}
+
+.pageLinks a:hover {
+    background-color: #88858590;
+}
+
+#csumb_logo {
+
+    display: block;
+    width: 15%;
+    height: 15%;
+    
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.centerCaptions{
+    text-align: center;
+}
+
+#centerForm{
+    text-align: center;
+    margin: 0 auto;
+}
