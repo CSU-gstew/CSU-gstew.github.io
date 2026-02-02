@@ -8,6 +8,8 @@
 .teamFigure {
     width: 100%;
     padding: 10px;
+    font-family: "Lucida Console", "Courier New", monospace;
+    font-size: larger;
 }
 
 #teamFlexBox {
@@ -72,4 +74,12 @@ hr {
 #centerForm{
     text-align: center;
     margin: 0 auto;
+}
+
+.footer{
+    color: #18151590;
+    text-align: center;
+}
+.intro{
+    text-align: center;
 }
