@@ -1,0 +1,126 @@
+.teamImg{
+    width: 100%;
+    height: auto;
+    border: 2px solid #000000;
+    object-fit: cover;
+}
+
+.teamFigure {
+    width: 100%;
+    padding: 10px;
+    font-family: "Lucida Console", "Courier New", monospace;
+    font-size: larger;
+}
+
+#teamFlexBox {
+    display: flex;
+    /* flex-wrap: wrap; */
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#background{
+    background-color: rgba(10, 130, 190, 0.921);
+}
+
+hr {
+    border: 2px;
+    border-top: 3px solid black;
+}
+
+.pageTitle {
+    text-align: center;
+    font-size: 48px;
+    color: #333333;
+    font-family: 'Arial', sans-serif;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.pageLinks {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin-bottom: 2px;
+}
+
+.pageLinks a {
+    text-decoration: none;
+    border: 2px solid black;
+    padding: 8px;
+    color: black;
+    background-color: #acaaaa90;
+
+}
+
+.pageLinks a:hover {
+    background-color: #88858590;
+}
+
+#csumb_logo {
+
+    display: block;
+    width: 15%;
+    height: 15%;
+    
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.centerCaptions{
+    text-align: center;
+}
+
+#centerForm{
+    text-align: center;
+    margin: 0 auto;
+}
+
+.footer{
+    color: #18151590;
+    text-align: center;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+
+.mainBox {
+    background-color: #ffffff90;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+.highlight {
+    border: 2px solid black;
+}
+
+.sourceList li a {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+.image {
+
+    display: block;
+    width: 75%;
+    height: 75%;
+    border-radius: 10px;
+    
+    margin-left: auto;
+    margin-right: auto;
+}
+.GEFlexBox {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.proCons{
+    flex: 1 1 240px;
+    background: #ffffff90;
+    padding: 12px;
+    border: 1px solid #bfc7d6;
+}
