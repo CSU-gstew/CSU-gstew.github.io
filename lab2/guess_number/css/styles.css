@@ -1,0 +1,16 @@
+
+body {
+    background-image: url("../img/background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    
+    text-align: center;
+}
+
+header, #main {
+    background-color: white;
+    width: 400px;
+    margin: 20px auto;
+    padding: 15px;
+}
