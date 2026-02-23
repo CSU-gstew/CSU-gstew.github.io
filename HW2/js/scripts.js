@@ -3,7 +3,8 @@ document.querySelector("#startBtn").addEventListener("click", startGame);
 document.querySelector("#guessBtn").addEventListener("click", checkLetter);
 document.querySelector("#resetBtn").addEventListener("click", resetGame);
 
-
+//I was considering adding a few extra words and also implementing the ability for
+//double words like "Otter Express" but I ran out of time.
 let words = ["otter", "monty", "seaside", "chapman", "heron",];
 let selectedWord;
 let guessedLetters;
