@@ -4,7 +4,7 @@ document.querySelector("#guessBtn").addEventListener("click", checkLetter);
 document.querySelector("#resetBtn").addEventListener("click", resetGame);
 
 
-let words = ["javascript", "coding", "developer", "computer", "variable"];
+let words = ["javascript", "coding", "developer", "computer", "programming"];
 let selectedWord;
 let guessedLetters;
 let wrongLetters;

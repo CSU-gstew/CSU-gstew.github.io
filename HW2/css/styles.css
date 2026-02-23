@@ -13,6 +13,10 @@ h1 {
     margin-top: 30px;
     letter-spacing: 2px;
 }
+h2 {
+    color: #dcdcdc;
+    margin-bottom: 20px;
+}
 
 #gameContainer {
     background-color: #f9f9f9;
