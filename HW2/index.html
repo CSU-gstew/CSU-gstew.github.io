@@ -3,44 +3,44 @@
 <head>
     <title>Hangman Game</title>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/scripts.js" defer></script>
 </head>
 <body>
 
     <header>
         <h1>Hangman</h1>
-        <h2>Guess the word before the man is complete!</h2>
     </header>
 
-    <img id="hangmanImg" src="img/0.png" width="200">
+    <div id="gameContainer">
+        <img id="hangmanImg" src="img/0.png" width="200">
 
-    <button id="startBtn">Start Game</button>
+        <button id="startBtn">Start Game</button>
 
-    <div id="gameArea" style="display:none;">
+        <div id="gameArea" style="display:none;">
 
-        <h3 id="wordDisplay"></h3>
+            <h3 id="wordDisplay"></h3>
 
-        <div>
-            Enter a letter:
-            <input type="text" id="letterInput" maxlength="1">
-            <button id="guessBtn">Guess</button>
+            <div>
+                Enter a letter:
+                <input type="text" id="letterInput" maxlength="1">
+                <button id="guessBtn">Guess</button>
+            </div>
+
+            <div id="feedback"></div>
+
+            <div>
+                Wrong Letters:
+                <span id="wrongLetters"></span>
+            </div>
+
+            <div>
+                Remaining Guesses:
+                <span id="remaining"></span>
+            </div>
+
+            <button id="resetBtn" style="display:none;">Reset Game</button>
         </div>
-
-        <div id="feedback"></div>
-
-        <div>
-            Wrong Letters:
-            <span id="wrongLetters"></span>
-        </div>
-
-        <div>
-            Remaining Guesses:
-            <span id="remaining"></span>
-        </div>
-
-        <button id="resetBtn" style="display:none;">Reset Game</button>
-
     </div>
-
-    <script src="js/scripts.js"></script>
 </body>
 </html>
