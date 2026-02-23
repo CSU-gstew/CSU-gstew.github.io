@@ -1,0 +1,50 @@
+body {
+  background-color: #f4f7fb;
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  color: white;
+  border-radius: 12px;
+}
+
+h3 {
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+input, select {
+  padding: 6px;
+  margin: 6px;
+  border-radius: 6px;
+}
+
+button {
+  font-size: 18px;
+  padding: 10px 25px;
+  border-radius: 8px;
+}
+
+label {
+  margin-right: 12px;
+  cursor: pointer;
+}
+
+.bg-success {
+  border-radius: 6px;
+}
+
+.bg-danger {
+  border-radius: 6px;
+}
+
+#totalScore {
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 15px;
+}
+
+#totalAttempts {
+  font-size: 16px;
+  color: #555;
+}

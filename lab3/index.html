@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSUMB Quiz</title>
+
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+
+  <script src="https://cdn.jsdelivr.net/npm/underscore@1.13.2/underscore-umd-min.js"></script>
+
+  <link rel="stylesheet" href="css/styles.css">
+
+  <script src="js/script.js" defer></script>
+</head>
+
+<body class="text-center">
+
+  <h1 class="p-5 bg-info">CSUMB Quiz</h1>
+
+  <h3><span id="markImg1"></span> What City is CSUMB located in?</h3>
+  <input type="text" id="q1">
+  <div id="q1Feedback"></div>
+
+  <br>
+
+  <h3><span id="markImg2"></span> What year was CSUMB founded?</h3>
+  <select id="q2">
+    <option value="">-- Select --</option>
+    <option value="1992">1992</option>
+    <option value="1994">1994</option>
+    <option value="1995">1995</option>
+  </select>
+  <div id="q2Feedback"></div>
+
+  <br>
+
+  <h3><span id="markImg3"></span> Which dining locations are present on campus currently? </h3>
+  <input type="checkbox" id="Starbucks"> <label for="Starbucks">Starbucks</label>
+  <input type="checkbox" id="WildPie"> <label for="WildPie">Wild Pie</label>
+  <input type="checkbox" id="Burger831"> <label for="Burger831">Burger 831</label>
+  <input type="checkbox" id="Sono"> <label for="Sono">Sono</label>
+  <div id="q3Feedback"></div>
+
+  <br>
+
+  <h3><span id="markImg4"></span> What is CSUMB's Mascot?</h3>
+  <div id="q4Choices"></div>
+  <div id="q4Feedback"></div>
+
+  <br>
+
+  <h3><span id="markImg5"></span> How many floors are there in the BIT building?</h3>
+  <input type="number" id="q5">
+  <div id="q5Feedback"></div>
+
+  <br>
+
+  <div id="validationFdbk" class="text-danger"></div>
+
+  <button class="btn btn-primary mt-3">Submit Quiz</button>
+
+  <h4 id="totalScore"></h4>
+  <h5 id="totalAttempts"></h5>
+
+</body>
+</html>
