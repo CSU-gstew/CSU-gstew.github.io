@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include("partials/head") %>
+
+<body>
+    <%- include("partials/navbar") %>
+
+    <main class="container my-4">
+        <h2 class="page-title"><%= title %></h2>
+
+        <div class="row two-col">
+            <section class="col-md-6 panel">
+                <h3>Planet Information</h3>
+
+                <%
+                    const labels = {
+                        distanceFromSun: "Distance from Sun",
+                        yearLength: "Length of Year",
+                        description: "Description",
+                        def: "Description",
+                        radius: "Radius",
+                        websiteLink: "Website",
+                        link: "Website",
+                        oneEarthDay: "One Day",
+                        moons: "Moons"
+                    };
+                %>
+
+                <% for (let key in planetInfo) { %>
+                    <% if (key !== "image") { %>
+                        <p class="info-line">
+                            <strong><%= labels[key] || key %>:</strong>
+
+                            <% if (key === "link" || key === "websiteLink") { %>
+                                <a href="<%= planetInfo[key] %>" target="_blank">
+                                    Open Link
+                                </a>
+                            <% } else { %>
+                                <%= planetInfo[key] %>
+                            <% } %>
+                        </p>
+                    <% } %>
+                <% } %>
+            </section>
+
+            <section class="col-md-6 panel image-panel">
+                <h3><%= title %> Image</h3>
+                <img src="<%= planetInfo.image %>" alt="<%= title %>" class="main-image">
+            </section>
+        </div>
+    </main>
+
+    <%- include("partials/footer") %>
+</body>
+</html>

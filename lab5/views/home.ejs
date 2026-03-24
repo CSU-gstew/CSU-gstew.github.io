@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include("partials/head") %>
+
+<body>
+    <%- include("partials/navbar") %>
+
+    <main class="container my-4">
+        <div class="row two-col">
+            <section class="col-md-6 panel">
+                <h2>Welcome</h2>
+                <p>
+                    Explore the planets, asteroids, comets, and NASA's Astronomy Picture of the Day.
+                </p>
+                <p>
+                    Use the menu above to learn about each part of the Solar System.
+                </p>
+            </section>
+
+            <section class="col-md-6 panel image-panel">
+                <h2>Random Solar System Image</h2>
+                <% if (image) { %>
+                    <img src="<%= image %>" alt="Solar system image" class="main-image">
+                <% } else { %>
+                    <p>Image unavailable right now.</p>
+                <% } %>
+            </section>
+        </div>
+    </main>
+
+    <%- include("partials/footer") %>
+</body>
+</html>

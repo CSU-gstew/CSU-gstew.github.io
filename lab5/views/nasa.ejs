@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include("partials/head") %>
+
+<body>
+    <%- include("partials/navbar") %>
+
+    <main class="container my-4">
+        <h2 class="page-title">NASA Astronomy Picture of the Day</h2>
+
+        <div class="row two-col">
+            <section class="col-md-6 panel">
+                <h3><%= pod.title %></h3>
+                <p><strong>Date:</strong> <%= pod.date %></p>
+                <p><%= pod.explanation %></p>
+            </section>
+
+            <section class="col-md-6 panel image-panel">
+                <% if (pod.media_type === "image") { %>
+                    <img src="<%= pod.url %>" alt="<%= pod.title %>" class="main-image">
+                <% } else { %>
+                    <iframe src="<%= pod.url %>" class="video-frame" allowfullscreen></iframe>
+                <% } %>
+            </section>
+        </div>
+    </main>
+
+    <%- include("partials/footer") %>
+</body>
+</html>
