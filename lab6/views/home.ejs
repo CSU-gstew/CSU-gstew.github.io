@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<!DOCTYPE html>
+<html lang="en">
+<%- include("partials/head") %>
+<body>
+<body>  
+    <div class="container py-4">
+    <div class="page-box">
+        <h1 class="text-center mb-4">Quote Finder</h1>
+
+        <div class="row g-4">
+            <div class="col-md-6">
+                <h3>Search by Keyword</h3>
+
+                <form action="/searchByKeyword" method="GET">
+                    <label class="form-label">Keyword</label>
+                    <input type="text" name="keyword" class="form-control">
+
+                    <button class="btn search-btn mt-3">
+                        Search
+                    </button>
+                </form>
+            </div>
+            <div class="col-md-6">
+                <h3>Search by Author</h3>
+
+                <form action="/searchByAuthor" method="GET">
+                    <label class="form-label">Author</label>
+
+                    <select name="authorId" class="form-select">
+                        <% for (let i of authors) { %>
+                            <option value="<%= i.authorId %>">
+                                <%= i.firstName %> <%= i.lastName %>
+                            </option>
+                        <% } %>
+                    </select>
+
+                    <button class="btn search-btn mt-3">
+                        Search
+                    </button>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
+<%- include("partials/footer") %>
+</body>
+</html>
