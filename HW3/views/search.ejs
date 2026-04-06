@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include("partials/head") %>
+<body>
+    <%- include("partials/nav") %>
+
+    <main class="page-box">
+        <h1>Search Solar Flares</h1>
+
+        <form action="/results" method="GET" class="card">
+            <label for="startDate">Start Date:</label>
+            <input type="date" id="startDate" name="startDate">
+
+            <label for="endDate">End Date:</label>
+            <input type="date" id="endDate" name="endDate">
+
+            <button type="submit">Search</button>
+        </form>
+    </main>
+
+    <%- include("partials/footer") %>
+</body>
+</html>

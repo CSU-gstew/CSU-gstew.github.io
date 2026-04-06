@@ -1,0 +1,15 @@
+{
+  "name": "solar-flare-tracker",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "index.mjs",
+  "scripts": {
+    "start": "node index.mjs"
+  },
+  "dependencies": {
+    "astronomy-engine": "^2.1.19",
+    "ejs": "^3.1.10",
+    "express": "^5.1.0"
+  }
+}

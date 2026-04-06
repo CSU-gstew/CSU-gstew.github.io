@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include("partials/head") %>
+<body>
+    <%- include("partials/nav") %>
+
+    <main class="page-box">
+        <h1>Solar Flare Tracker</h1>
+
+        <section class="card">
+            <h2>What Are Solar Flares?</h2>
+            <div class="two-column">
+                <div>
+                    <p>
+                        Solar Flares are giant discharges of energy, light, and heat by the sun which gets sent into space.
+                        These occur when energy stored in magnetic fields, typically above sunspots, is suddennly released violently.
+                    </p>
+                    <p>
+                        Solar flares can affect radio communication, satellites, and space weather near Earth.
+                        This site uses NASA data to show recent solar flare activity.
+                    </p>
+                </div>
+
+                <div class="image-box">
+                    <img src="/solar_flare.webp" alt="Solar flare" class="hero-image">
+                </div>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>Random Recent Solar Flares</h2>
+
+            <% if (randomFlares.length === 0) { %>
+                <p>No recent solar flares found.</p>
+            <% } %>
+
+            <% for (let flare of randomFlares) { %>
+                <div class="flare-box">
+                    <p><strong>Class Type:</strong> <%= flare.classType || "N/A" %></p>
+                    <p><strong>Begin Time:</strong> <%= prettyDate(flare.beginTime) %></p>
+                    <p><strong>Peak Time:</strong> <%= prettyDate(flare.peakTime) %></p>
+                    <p><strong>Source Location:</strong> <%= flare.sourceLocation || "Unknown" %></p>
+                </div>
+            <% } %>
+        </section>
+
+        <section class="card">
+            <h2>Astronomy Package Data</h2>
+
+            <div class="flare-box">
+                <p><strong>Year:</strong> <%= year %></p>
+                <p><strong>March Equinox:</strong> <%= seasons.mar_equinox.date.toLocaleString() %></p>
+                <p><strong>June Solstice:</strong> <%= seasons.jun_solstice.date.toLocaleString() %></p>
+                <p><strong>September Equinox:</strong> <%= seasons.sep_equinox.date.toLocaleString() %></p>
+                <p><strong>December Solstice:</strong> <%= seasons.dec_solstice.date.toLocaleString() %></p>
+            </div>
+        </section>
+    </main>
+
+    <%- include("partials/footer") %>
+</body>
+</html>

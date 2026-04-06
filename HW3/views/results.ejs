@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include("partials/head") %>
+<body>
+    <%- include("partials/nav") %>
+
+    <main class="page-box">
+        <h1>Search Results</h1>
+
+        <% if (errorMsg) { %>
+            <p class="error"><%= errorMsg %></p>
+        <% } %>
+
+        <% if (!errorMsg) { %>
+            <p>Showing results from <strong><%= startDate %></strong> to <strong><%= endDate %></strong>.</p>
+        <% } %>
+
+        <% if (flares.length === 0 && !errorMsg) { %>
+            <p>No solar flares found for this date range.</p>
+        <% } %>
+
+        <% for (let flare of flares) { %>
+            <div class="flare-box">
+                <p><strong>Class Type:</strong> <%= flare.classType || "N/A" %></p>
+                <p><strong>Begin Time:</strong> <%= prettyDate(flare.beginTime) %></p>
+                <p><strong>Peak Time:</strong> <%= prettyDate(flare.peakTime) %></p>
+                <p><strong>End Time:</strong> <%= prettyDate(flare.endTime) %></p>
+                <p><strong>Source Location:</strong> <%= flare.sourceLocation || "Unknown" %></p>
+                <p><strong>Active Region:</strong> <%= flare.activeRegionNum || "N/A" %></p>
+            </div>
+        <% } %>
+    </main>
+
+    <%- include("partials/footer") %>
+</body>
+</html>
