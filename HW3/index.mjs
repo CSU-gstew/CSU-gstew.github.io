@@ -48,26 +48,58 @@ app.get("/", async (req, res) => {
 
         const randomFlares = shuffleArray(flares).slice(0, 3);
 
-        const year = new Date().getFullYear();
-        const seasons = Astronomy.Seasons(year);
+        // Monterey, CA area
+        const observer = new Astronomy.Observer(36.6002, -121.8947, 0);
+        const now = new Date();
+
+        const sunrise = Astronomy.SearchRiseSet(
+            "Sun",
+            observer,
+            +1,
+            now,
+            1
+        );
+
+        const sunset = Astronomy.SearchRiseSet(
+            "Sun",
+            observer,
+            -1,
+            now,
+            1
+        );
+
+        let sunriseText = "Not available";
+        let sunsetText = "Not available";
+        let dayLengthText = "Not available";
+
+        if (sunrise && sunset) {
+            const sunriseDate = sunrise.date;
+            const sunsetDate = sunset.date;
+
+            sunriseText = sunriseDate.toLocaleString();
+            sunsetText = sunsetDate.toLocaleString();
+
+            const diffMs = sunsetDate - sunriseDate;
+            const hours = Math.floor(diffMs / (1000 * 60 * 60));
+            const minutes = Math.floor((diffMs % (1000 * 60 * 60)) / (1000 * 60));
+            dayLengthText = `${hours} hours ${minutes} minutes`;
+        }
 
         res.render("home", {
             randomFlares,
             prettyDate,
-            year,
-            seasons
+            sunriseText,
+            sunsetText,
+            dayLengthText
         });
     } catch (error) {
         console.error(error);
-
-        const year = new Date().getFullYear();
-        const seasons = Astronomy.Seasons(year);
-
         res.render("home", {
             randomFlares: [],
             prettyDate,
-            year,
-            seasons
+            sunriseText: "Not available",
+            sunsetText: "Not available",
+            dayLengthText: "Not available"
         });
     }
 });

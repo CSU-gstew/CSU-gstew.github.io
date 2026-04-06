@@ -45,16 +45,14 @@
         </section>
 
         <section class="card">
-            <h2>Astronomy Package Data</h2>
+            <h2>Today's Sun Data</h2>
 
             <div class="flare-box">
-                <p><strong>Year:</strong> <%= year %></p>
-                <p><strong>March Equinox:</strong> <%= seasons.mar_equinox.date.toLocaleString() %></p>
-                <p><strong>June Solstice:</strong> <%= seasons.jun_solstice.date.toLocaleString() %></p>
-                <p><strong>September Equinox:</strong> <%= seasons.sep_equinox.date.toLocaleString() %></p>
-                <p><strong>December Solstice:</strong> <%= seasons.dec_solstice.date.toLocaleString() %></p>
+                <p><strong>Sunrise:</strong> <%= sunriseText %></p>
+                <p><strong>Sunset:</strong> <%= sunsetText %></p>
+                <p><strong>Day Length:</strong> <%= dayLengthText %></p>
             </div>
-        </section>
+</section>
     </main>
 
     <%- include("partials/footer") %>
