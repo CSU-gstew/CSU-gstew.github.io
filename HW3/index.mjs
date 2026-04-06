@@ -48,7 +48,6 @@ app.get("/", async (req, res) => {
 
         const randomFlares = shuffleArray(flares).slice(0, 3);
 
-        // Monterey, CA area
         const observer = new Astronomy.Observer(36.6002, -121.8947, 0);
         const now = new Date();
 
